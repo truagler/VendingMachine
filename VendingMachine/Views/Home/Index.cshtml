@@ -1,0 +1,27 @@
+@using VendingMachine.Models.Domain
+@model VendingMachine.Models.ViewModel.DrinkAndCodeViewModel
+@await Html.PartialAsync("popup")
+@{
+    ViewData["Title"] = "Vending Machine";
+}
+
+<script src="/js/site.js"></script>
+
+<div class="card-group">
+    @foreach (DrinksAndEats product in Model.Products)
+    {
+        <div class="product-wrap">
+            <div class="product-item">
+                <img src="@product.Img">
+                <div class="product-buttons">
+                    <a type="button" class="button" onclick="showModal(@product.Id)">Купить</a>
+                    <div class="product-title">
+                        <a>@product.Name</a>
+                        <span class="product-price">₽ @product.Price</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+        

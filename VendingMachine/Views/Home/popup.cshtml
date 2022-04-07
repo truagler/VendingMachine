@@ -1,0 +1,29 @@
+<div id="buyProduct" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">
+                    <h1>Покупка товара</h1>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <a id="nameProduct"></a>
+                    <a id="priceProduct" class="product-price"></a>
+                    <a id="countCoin"></a>
+                    <a id="coinLeft"></a>
+                </div>
+                <div>
+                    <button id="one" class="btn btn-primary buttonRadius" onclick="clickCoin()">1</button>
+                    <button id="two" class="btn btn-primary buttonRadius ">2</button>
+                    <button id="five" class="btn btn-primary buttonRadius ">5</button>
+                    <button id="ten" class="btn btn-primary buttonRadius ">10</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="buy" class="btn btn-success" disabled="disabled" onclick="buyProduct()">Купить</button>
+                <button class="btn btn-danger" onclick="closeModal()">Выйти</button>
+            </div>
+        </div>
+    </div>
+</div>
