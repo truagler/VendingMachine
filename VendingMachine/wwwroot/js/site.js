@@ -102,7 +102,10 @@ function clickCoin(id, coin){
 		url: '/clickcoin',
 		method: 'post',
 		dataType: 'html',
-		data: {id: id, coin: coin}
+		data: {id: id, coin: coin},
+		success: function (data){
+			
+		}
 	});
 }
 

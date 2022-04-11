@@ -33,7 +33,7 @@ namespace WebApplication1.Models.Code
 
 		public DrinkAndCodeViewModel GetProduct(Int32 id)
 		{
-			DrinksAndEats domain = new DrinksAndEats() { Name = "Пепси", Price = 23, CoinBase = 20};//_serviceInterface.GetDrinkOrEat(id);
+			DrinksAndEats domain = new DrinksAndEats() { Name = "Пепси", Price = 12, CoinBase = 20};//_serviceInterface.GetDrinkOrEat(id);
 			
 			DrinkAndCodeViewModel model = new DrinkAndCodeViewModel(){Product = domain};
 

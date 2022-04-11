@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vopro\\RiderProjects\\VendingMachine\\VendingMachine\\VendingMachine.csproj": {}
+    "C:\\Users\\vopro\\Documents\\test\\VendingMachine\\VendingMachine.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vopro\\RiderProjects\\VendingMachine\\VendingMachine\\VendingMachine.csproj": {
+    "C:\\Users\\vopro\\Documents\\test\\VendingMachine\\VendingMachine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vopro\\RiderProjects\\VendingMachine\\VendingMachine\\VendingMachine.csproj",
+        "projectUniqueName": "C:\\Users\\vopro\\Documents\\test\\VendingMachine\\VendingMachine.csproj",
         "projectName": "VendingMachine",
-        "projectPath": "C:\\Users\\vopro\\RiderProjects\\VendingMachine\\VendingMachine\\VendingMachine.csproj",
+        "projectPath": "C:\\Users\\vopro\\Documents\\test\\VendingMachine\\VendingMachine.csproj",
         "packagesPath": "C:\\Users\\vopro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vopro\\RiderProjects\\VendingMachine\\VendingMachine\\obj\\",
+        "outputPath": "C:\\Users\\vopro\\Documents\\test\\VendingMachine\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vopro\\AppData\\Roaming\\NuGet\\NuGet.Config",
