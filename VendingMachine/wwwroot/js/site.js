@@ -1,21 +1,42 @@
-﻿function showModal(id) {
+﻿function showModalBuy(id) {
 	$("#buyProduct").modal('show');
 	getProduct(id);
 }
 
-function showModalAdd(id) {
+function showModalAdd() {
 	$("#modalAdd").modal('show');
-	getProduct(id);
 }
 
 function showModalEdit(id) {
 	$("#modalAdd").modal('show');
-	getProduct(id);
+	getProductForEdit(id);
 }
 
 function closeModal(){
 	$("#buyProduct").modal('hide');
 	location.reload();
+}
+
+function closeModalAdd(){
+	$("#modalAdd").modal('hide');
+	location.reload();
+}
+
+function closeModalEdit(){
+	$("#modalEdit").modal('hide');
+	location.reload();
+}
+
+function getProductForEdit(id){
+	$.ajax({
+		url: '/getproduct',
+		method: 'get',
+		dataType: 'html',
+		data: {id: id},
+		success: function (data){
+			updateProductEdit(data);
+		}
+	});
 }
 
 function getProduct(id){
@@ -33,6 +54,18 @@ function getProduct(id){
 function coinOne(id, coin){
 	clickCoin(id, coin);
 	getProduct(id);
+}
+
+function updateProductEdit(data){
+	const product = JSON.parse(data);
+	let img = document.getElementById('editProductImg');
+	let name = document.getElementById('editProductName');
+	let price = document.getElementById('editProductPrice');
+	let id = document.getElementById('idEditProduct');
+	id.value = product.product.id;
+	img.value = product.product.img;
+	name.value = product.product.image;
+	price.value = product.product.image;
 }
 
 function updateProduct(data){
@@ -70,7 +103,11 @@ function getProducts(){
 	});
 }
 
-function addProduct(productName, price, img){
+function addProduct(){
+	let productName = document.getElementById('addProductName').value;
+	let price = document.getElementById('addProductPrice').value;
+	let img = document.getElementById('addProductImg').value;
+
 	$.ajax({
 		url: '/addproduct',
 		method: 'post',
@@ -79,13 +116,19 @@ function addProduct(productName, price, img){
 	});
 }
 
-function editProduct(id, productName, price, img){
+function editProduct(){
+	let productName = document.getElementById('addProductName').value;
+	let price = document.getElementById('addProductPrice').value;
+	let img = document.getElementById('addProductImg').value;
+	let id = document.getElementById('addProductImg').value;
+
 	$.ajax({
 		url: '/editproduct',
 		method: 'post',
 		dataType: 'html',
 		data: {id: id, productName: productName, price: price, img: img}
 	});
+	location.reload();
 }
 
 function removeProduct(id){
@@ -95,6 +138,7 @@ function removeProduct(id){
 		dataType: 'html',
 		data: {id: id}
 	});
+	location.reload();
 }
 
 function clickCoin(id, coin){

@@ -1,11 +1,12 @@
 @using VendingMachine.Models.Domain
 @model VendingMachine.Models.ViewModel.DrinkAndCodeViewModel
 @await Html.PartialAsync("PopupAdd")
+@await Html.PartialAsync("PopupEdit")
 @{
     ViewData["Title"] = "Administrator panel";
 }
 <header>
-    <h1>Панель администратора<button class="btn btn-success" onclick="">Добавить</button></h1>
+    <h1>Панель администратора<button class="btn btn-success" onclick="showModalAdd()">Добавить</button></h1>
 </header>
 <body>
 @foreach (DrinksAndEats product in Model.Products)
@@ -14,11 +15,8 @@
             <div class="product-item">
                 <img src="@product.Img">
                 <div class="product-buttons">
-                    <a type="button" class="button" onclick="showModal(@product.Id)">Купить</a>
-                    <div class="product-title">
-                        <a>@product.Name</a>
-                        <span class="product-price">₽ @product.Price</span>
-                    </div>
+                    <a type="button" class="button" onclick="showModalEdit(@product.Id)">Купить</a>
+                    <a type="button" class="button" onclick="removeProduct(@product.Id)">Купить</a>
                 </div>
             </div>
         </div>

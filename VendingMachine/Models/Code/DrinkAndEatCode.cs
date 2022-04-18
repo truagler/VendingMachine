@@ -33,7 +33,7 @@ namespace WebApplication1.Models.Code
 
 		public DrinkAndCodeViewModel GetProduct(Int32 id)
 		{
-			DrinksAndEats domain = new DrinksAndEats() { Name = "Пепси", Price = 12, CoinBase = 20};//_serviceInterface.GetDrinkOrEat(id);
+			DrinksAndEats domain = _serviceInterface.GetDrinkOrEat(id);
 			
 			DrinkAndCodeViewModel model = new DrinkAndCodeViewModel(){Product = domain};
 
@@ -42,11 +42,7 @@ namespace WebApplication1.Models.Code
 
 		public DrinkAndCodeViewModel GetProducts()
 		{
-			List<DrinksAndEats> domain = new List<DrinksAndEats>(); //_serviceInterface.GetProducts();
-
-			DrinksAndEats asd = new DrinksAndEats() {Id = 1, Name = "Пепси", Price = 123, Img ="asdasdasdasd" };
-			
-			domain.Add(asd);
+			List<DrinksAndEats> domain =  _serviceInterface.GetProducts();
 			
 			DrinkAndCodeViewModel viewModelList = new DrinkAndCodeViewModel(){Products = domain};
 			

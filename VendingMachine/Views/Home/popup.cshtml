@@ -15,13 +15,13 @@
                 </div>
                 <div>
                     <button id="one" class="btn btn-primary buttonRadius" onclick="coinOne(getProduct.id, 1)">1</button>
-                    <button id="two" class="btn btn-primary buttonRadius" onclick="">2</button>
-                    <button id="five" class="btn btn-primary buttonRadius " onclick="">5</button>
-                    <button id="ten" class="btn btn-primary buttonRadius " onclick="">10</button>
+                    <button id="two" class="btn btn-primary buttonRadius" onclick="coinOne(getProduct.id, 2)">2</button>
+                    <button id="five" class="btn btn-primary buttonRadius " onclick="coinOne(getProduct.id, 5)">5</button>
+                    <button id="ten" class="btn btn-primary buttonRadius " onclick="coinOne(getProduct.id, 10)">10</button>
                 </div>
             </div>
             <div class="modal-footer">
-                <button id="buy" class="btn btn-success" disabled="disabled" onclick="buyProduct()">Купить</button>
+                <button id="buy" class="btn btn-success" disabled="disabled" onclick="buyProduct(getProduct.id)">Купить</button>
                 <button class="btn btn-danger" onclick="closeModal()">Выйти</button>
             </div>
         </div>
